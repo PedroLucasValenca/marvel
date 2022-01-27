@@ -1,0 +1,7 @@
+
+
+<div >
+    <ul >
+        <li *ngFor="let caracter of characters | async ">{{caracter.name}}  <img src="{{caracter.thumbnail.path}}.{{caracter.thumbnail.extension}}" alt=""></li>
+    </ul>
+</div>
