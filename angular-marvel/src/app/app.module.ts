@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './pages/characters/characters/characters.component';
 import { FilterComponent } from './shared/filter/filter/filter.component';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found/page-not-found.component';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CharactersComponent,
-    FilterComponent
+    FilterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

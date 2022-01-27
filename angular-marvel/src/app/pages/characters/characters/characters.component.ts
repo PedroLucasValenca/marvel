@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 import { MarvelApiService } from './../../../service/marvel-service/marvel-api.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class CharactersComponent implements OnInit {
 
   characters!: Observable<any>;
 
-  constructor(private serviceMarvel: MarvelApiService) { }
+  constructor(private serviceMarvel: MarvelApiService,
+              private router: Router) { }
 
   ngOnInit(): void {
   
@@ -31,7 +33,7 @@ export class CharactersComponent implements OnInit {
     resultCharactersFind.subscribe((result:any) => {
 
       if(result.length === 0) {
-
+        this.router.navigateByUrl("/not-found");
       } else {
         this.characters = resultCharactersFind;
       }
