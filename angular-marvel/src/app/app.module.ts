@@ -7,6 +7,9 @@ import { HeaderComponent } from './shared/header/header/header.component';
 import { FooterComponent } from './shared/footer/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './pages/characters/characters/characters.component';
+import { FilterComponent } from './shared/filter/filter/filter.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -14,12 +17,14 @@ import { CharactersComponent } from './pages/characters/characters/characters.co
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CharactersComponent
+    CharactersComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

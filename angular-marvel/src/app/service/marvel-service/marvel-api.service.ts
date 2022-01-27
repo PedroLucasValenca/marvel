@@ -27,4 +27,16 @@ export class MarvelApiService {
     .pipe(map((data: CharactersModel) => data.data.results))
 
   }
+
+  getCharactersByStartName(name: string): Observable<any> {
+    return this.http.get<any>(`${this.env.apiMarvel}/v1/public/characters?ts=${this.timeStamp}&apikey=${this.public_key}&hash=${this.hash}&nameStartsWith=${name}`)
+    .pipe(map((data: CharactersModel) => data.data.results))
+
+  }
+
+  getAddCharacters(limit: number): Observable<any> {
+    return this.http.get<any>(`${this.env.apiMarvel}/v1/public/characters?ts=${this.timeStamp}&apikey=${this.public_key}&hash=${this.hash}&limit=${limit}`)
+    .pipe(map((data: CharactersModel) => data.data.results))
+
+  }
 }

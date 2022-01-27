@@ -1,7 +1,15 @@
 
-
-<div >
+<app-filter (filterCharacters)="charactersResult($event)"></app-filter>
+<div class="container-characteres">
     <ul >
-        <li *ngFor="let caracter of characters | async ">{{caracter.name}}  <img src="{{caracter.thumbnail.path}}.{{caracter.thumbnail.extension}}" alt=""></li>
+        <li *ngFor="let caracter of characters | async ">
+            <div class="character-card">
+                    <img src="{{caracter.thumbnail.path}}.{{caracter.thumbnail.extension}}" alt="">
+                    {{caracter.name}}
+            </div>  
+        </li>
     </ul>
+    <div *ngIf="characters" class="buttonMore">
+        <button (click)="addCharacters()">Carregar mais</button>
+    </div>
 </div>
