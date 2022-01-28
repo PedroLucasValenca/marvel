@@ -1,0 +1,27 @@
+
+
+.container-home {
+
+    text-align: center;
+    padding-bottom: 30px;
+
+    h1 {
+        font-size: 45px;
+    }
+    p {
+        font-size: 20px
+    }
+
+}
+
+
+@media(max-width: 1200px) {
+    .container-home {
+
+        img {
+            width: 70%;
+        }
+    
+    }
+
+  }

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class SeriesComponent implements OnInit {
 
   series!: Observable<any>;
-  placeholder: string = 'Busque pelo começo do nome da sua serie ou nome completo'
+  placeholder: string = 'Busque pelo começo do nome da sua série ou nome completo'
 
   constructor(private serviceSeries: SeriesMarvelApiService,
               private router: Router) { }
