@@ -30,15 +30,24 @@ export class CharactersComponent implements OnInit {
     
   }
 
-  resultFind(resultCharactersFind: Observable<any>){
-    resultCharactersFind.subscribe((result:any) => {
+  filterFind(valueParam: string){
 
-      if(result.length === 0) {
-        this.router.navigateByUrl("/not-found");
-      } else {
-        this.characters = resultCharactersFind;
-      }
-    })
+    if(valueParam) {
+      this.characters = this.serviceMarvel.getCharactersByStartName(valueParam);
+
+      this.characters.subscribe((result:any) => {
+
+        if(result.length === 0) {
+          this.router.navigateByUrl("/not-found");
+        } else {
+          this.characters = this.characters;
+        }
+      });
+      
+    }else {
+      this.characters = this.serviceMarvel.getCharacters();
+    }
+    
   }
 
 
@@ -56,6 +65,9 @@ export class CharactersComponent implements OnInit {
       
     })
   }
+
+
+ 
 
   
 

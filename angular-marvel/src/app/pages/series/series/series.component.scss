@@ -5,9 +5,7 @@
     ul {
         list-style: none;
         padding: 0px;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
+        text-align: center;
         
     
         li {
@@ -21,6 +19,7 @@
                 text-align: center;
                 padding: 6px 5px 5px;
                 margin: 10px;
+                width: 345px;
 
                 img {
                     display: flex;

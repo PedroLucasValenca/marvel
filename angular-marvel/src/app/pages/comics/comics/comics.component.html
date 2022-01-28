@@ -1,0 +1,15 @@
+
+<app-filter (filterValue)="filterFind($event)" [placeholder]="placeholder"></app-filter>
+<div class="container-comics">
+    <ul >
+        <li *ngFor="let comic of comics | async ">
+            <div class="comics-card">
+                    <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="{{comic.title}}">
+                    {{comic.title}}
+            </div>  
+        </li>
+    </ul>
+    <div class="buttonMore">
+        <button (click)="addComics()">Carregar mais</button>
+    </div>
+</div>

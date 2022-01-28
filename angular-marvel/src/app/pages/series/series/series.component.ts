@@ -29,15 +29,24 @@ export class SeriesComponent implements OnInit {
     
   }
 
-  resultFind(resultSeriesFind: Observable<any>){
-    resultSeriesFind.subscribe((result:any) => {
+  filterFind(valueParam: string){
 
-      if(result.length === 0) {
-        this.router.navigateByUrl("/not-found");
-      } else {
-        this.series = resultSeriesFind;
-      }
-    })
+    if(valueParam) {
+      this.series = this.serviceSeries.getSeriesByTitleStartsWith(valueParam);
+
+      this.series.subscribe((result:any) => {
+
+        if(result.length === 0) {
+          this.router.navigateByUrl("/not-found");
+        } else {
+          this.series = this.series;
+        }
+      });
+    }else {
+      this.series = this.serviceSeries.getSeries();
+    }
+
+    
   }
 
 
@@ -54,6 +63,7 @@ export class SeriesComponent implements OnInit {
       
     })
   }
+
 
   
 

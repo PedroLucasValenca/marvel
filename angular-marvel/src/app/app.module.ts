@@ -11,6 +11,7 @@ import { FilterComponent } from './shared/filter/filter/filter.component';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found/page-not-found.component';
 import { SeriesComponent } from './pages/series/series/series.component';
+import { ComicsComponent } from './pages/comics/comics/comics.component';
 
 
 
@@ -22,7 +23,8 @@ import { SeriesComponent } from './pages/series/series/series.component';
     CharactersComponent,
     FilterComponent,
     PageNotFoundComponent,
-    SeriesComponent
+    SeriesComponent,
+    ComicsComponent
   ],
   imports: [
     BrowserModule,

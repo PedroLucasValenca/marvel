@@ -25,35 +25,15 @@ export class FilterComponent implements OnInit {
    
   }
 
-  verifyRoute() {
-    if(this.router.url === '/characters') {
-      this.searchCharacterByStartName();
-    }else if(this.router.url === '/series') {
-      this.searchSeriesByTitleStartsWith();
-    }
-  }
+  
 
 
-  searchCharacterByStartName() {
-    if(this.valueParam) {
-      this.filterObservable = this.serviceMarvel.getCharactersByStartName(this.valueParam);
-      this.filterValue.emit(this.filterObservable);
-    }else {
-      this.filterObservable = this.serviceMarvel.getCharacters();
-      this.filterValue.emit(this.filterObservable);
-    }
-    
-  }
+  
 
-  searchSeriesByTitleStartsWith() {
-    if(this.valueParam) {
-      this.filterObservable = this.serviceSeries.getSeriesByTitleStartsWith(this.valueParam);
-      this.filterValue.emit(this.filterObservable);
-    }else {
-      this.filterObservable = this.serviceSeries.getSeries();
-      this.filterValue.emit(this.filterObservable);
-    }
-    
+  
+
+  emitValueFind() {
+    this.filterValue.emit(this.valueParam)
   }
 
 }

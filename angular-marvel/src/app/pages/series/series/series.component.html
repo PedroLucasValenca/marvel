@@ -1,5 +1,5 @@
 
-<app-filter (filterValue)="resultFind($event)" [placeholder]="placeholder"></app-filter>
+<app-filter (filterValue)="filterFind($event)" [placeholder]="placeholder"></app-filter>
 <div class="container-series">
     <ul >
         <li *ngFor="let serie of series | async ">
