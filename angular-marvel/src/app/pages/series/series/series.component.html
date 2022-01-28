@@ -1,0 +1,15 @@
+
+<app-filter (filterValue)="resultFind($event)" [placeholder]="placeholder"></app-filter>
+<div class="container-series">
+    <ul >
+        <li *ngFor="let serie of series | async ">
+            <div class="series-card">
+                    <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="{{serie.title}}">
+                    {{serie.title}}
+            </div>  
+        </li>
+    </ul>
+    <div class="buttonMore">
+        <button (click)="addSeries()">Carregar mais</button>
+    </div>
+</div>

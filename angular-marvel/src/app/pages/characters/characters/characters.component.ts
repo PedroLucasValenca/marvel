@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class CharactersComponent implements OnInit {
 
   characters!: Observable<any>;
+  placeholder: string = 'Busque pelo começo do nome do seu personagem ou nome completo';
 
   constructor(private serviceMarvel: MarvelApiService,
               private router: Router) { }
@@ -29,7 +30,7 @@ export class CharactersComponent implements OnInit {
     
   }
 
-  charactersResult(resultCharactersFind: Observable<any>){
+  resultFind(resultCharactersFind: Observable<any>){
     resultCharactersFind.subscribe((result:any) => {
 
       if(result.length === 0) {

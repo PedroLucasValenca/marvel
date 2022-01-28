@@ -10,6 +10,7 @@ import { CharactersComponent } from './pages/characters/characters/characters.co
 import { FilterComponent } from './shared/filter/filter/filter.component';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found/page-not-found.component';
+import { SeriesComponent } from './pages/series/series/series.component';
 
 
 
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found/pa
     FooterComponent,
     CharactersComponent,
     FilterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SeriesComponent
   ],
   imports: [
     BrowserModule,
