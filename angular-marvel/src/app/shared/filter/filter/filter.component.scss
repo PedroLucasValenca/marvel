@@ -1,0 +1,27 @@
+
+.container-filter {
+    padding-top: 20px;
+    width: 89%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    input {
+        width: 80%;
+        height: 28px;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    button {
+        margin-left: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        padding: 8px;
+        border-radius: 5px;
+
+    }
+
+}

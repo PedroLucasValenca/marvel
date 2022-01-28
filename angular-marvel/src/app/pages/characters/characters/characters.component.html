@@ -1,0 +1,15 @@
+
+<app-filter (filterValue)="filterFind($event)" [placeholder]="placeholder"></app-filter>
+<div class="container-characteres">
+    <ul >
+        <li *ngFor="let caracter of characters | async ">
+            <div class="character-card">
+                    <img src="{{caracter.thumbnail.path}}.{{caracter.thumbnail.extension}}" alt="{{caracter.name}}">
+                    {{caracter.name}}
+            </div>  
+        </li>
+    </ul>
+    <div class="buttonMore">
+        <button (click)="addCharacters()">Carregar mais</button>
+    </div>
+</div>
